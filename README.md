@@ -1,4 +1,4 @@
-# Snippet project
+# DrHarness project
 
 ### Commands
 `gulp` - run build
