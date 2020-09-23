@@ -1,0 +1,43 @@
+include _mixins/svg-icon.pug
+
+block vars
+  -
+    var baseDir = ''
+  -
+    var title = typeof title !== 'undefined' ? title : null
+
+doctype html
+html(lang="ru")
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0")
+    meta(name="format-detection" content="telephone=no")
+    meta(name='description', content="")
+    meta(name='keywords', content="")
+    link(href="assets/img/favicon.ico" rel='shortcut icon')
+    link(href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet")
+    block styles
+
+  body.overflowed(style="opacity: 0;")
+
+    // Loader
+    include _layout/loader.pug
+
+    .layout
+      // Header
+      include _layout/header.pug
+      // Sidebar menu
+      include _layout/sidebar-menu.pug
+      // Content
+      block content
+
+    // Scripts
+    block scripts
+      script(src=`assets/js/bundle.js`)
+    
+
+  
+
+      

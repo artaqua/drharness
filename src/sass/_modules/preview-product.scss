@@ -1,0 +1,146 @@
+@import '_components/variables';
+@import '_components/mixins';
+
+.preview-product {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 80px 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #220213;
+    height: calc(100vh - 70px);
+    min-height: 600px;
+    max-height: 1200px;
+    @include sm {
+      height: auto;
+      padding: 60px 0;
+      min-height: auto;
+    }
+    @include below(500px) {
+      background-position: 60% 0;
+    }
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__top-title {
+    font-size: 34px;
+    font-weight: 300;
+    color: #FFF;
+    text-align: center;
+    margin: 0;
+    @include sm {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    @include below(500px) {
+      font-size: 18px;
+    }
+  }
+  &__head-title {
+    position: relative;
+    font-size: 82px;
+    font-weight: 700;
+    color: #FFF;
+    text-align: center;
+    margin: 0;
+    @include sm {
+      font-size: 60px;
+    }
+    @include below(500px) {
+      font-size: 40px;
+    }
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      display: block;
+      content: "";
+      width: 450px;
+      height: 3px;
+      background: #fff;
+      transform: translateX(-50%);
+      @include sm {
+        width: 350px;
+      }
+      @include below(500px) {
+        width: 230px;
+      }
+    }
+  }
+  &__sale-descr {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #FFF;
+    margin: 0;
+    margin-top: 40px;
+    @include sm {
+      font-size: 18px;
+    }
+    @include below(500px) {
+      font-size: 16px;
+    }
+  }
+  &__sale-price {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFF;
+    @include sm {
+      font-size: 28px;
+    }
+    @include below(500px) {
+      font-size: 18px;
+    }
+  }
+  &__sale-value {
+    font-size: 48px;
+    @include below(500px) {
+      font-size: 28px;
+    }
+  }
+  &__btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    @include below(500px) {
+      flex-direction: column;
+    }
+  }
+  &__btn {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFF;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    padding: 20px 15px;
+    margin: 0 10px;
+    @include sm {
+      font-size: 14px;
+      padding: 15px 10px;
+    }
+    @include below(600px) {
+      font-size: 12px;
+    }
+    @include below(500px) {
+      width: 200px;
+      text-align: center;
+      padding: 12px 10px;
+      margin: 5px 0;
+    }
+    &:hover {
+      color: $red;
+      background: #fff;
+      box-shadow: 0 4px 20px 0 rgba(207,218,229,.6);
+    }
+  }
+}

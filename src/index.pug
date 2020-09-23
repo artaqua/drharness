@@ -1,0 +1,613 @@
+extends pug/base
+
+append vars
+  - var title = 'Home'
+
+block styles
+  link(href=`assets/css/main.css` rel="stylesheet")
+
+block content
+  main
+    .layout__content
+      .preview-product
+        .preview-product__container.lazy(data-bg="url(assets/img/preview/bg.jpg)")
+          .container-fluid
+            .preview-product__inner
+              h4.preview-product__top-title Женские кожаные портупеи
+              h3.preview-product__head-title Dr.Harness
+              p.preview-product__sale-descr Любая модель со скидкой 50%
+              span.preview-product__sale-price всего за 
+                span.preview-product__sale-value 2990
+                | р.
+              .preview-product__btns
+                a.preview-product__btn(href="#") повседневные портупеи
+                a.preview-product__btn(href="#") Эротические портупеи
+
+        .descr-product.layout__margin-top
+          .container-fluid
+            h4.head-title Хит №1 в мире – модные женские портупеи
+            p.descr-product__descr Как и все кожаные аксессуары, портупея находится сегодня на пике востребованности в мире моды, даря своей обладательнице внимание и уверенность в себе.
+              br
+              br
+              | Многообразие видов портупей – это как Характер каждой девушки: от портупеи из тонких ремешков для романтичных и женственных натур, до сложных сплетений из средних и широких - для дерзких и раскрепощенных. 
+
+          .slider-products
+            .swiper-wrapper
+              .swiper-slide
+                .slider-products__item
+                  img.slider-products__img.lazy(data-src="./assets/img/slider-products/1.jpg", alt="#")
+              .swiper-slide
+                .slider-products__item
+                  img.slider-products__img.lazy(data-src="assets/img/slider-products/2.jpg", alt="#")
+              .swiper-slide
+                .slider-products__item
+                  img.slider-products__img.lazy(data-src="assets/img/slider-products/3.jpg", alt="#")
+              .swiper-slide
+                .slider-products__item
+                  img.slider-products__img.lazy(data-src="assets/img/slider-products/4.jpg", alt="#")
+              .swiper-slide
+                .slider-products__item
+                  img.slider-products__img.lazy(data-src="assets/img/slider-products/5.jpg", alt="#")
+              .swiper-slide
+                .slider-products__item
+                  img.slider-products__img.lazy(data-src="assets/img/slider-products/6.jpg", alt="#")
+              .swiper-slide
+                .slider-products__item
+                  img.slider-products__img.lazy(data-src="assets/img/slider-products/7.jpg", alt="#")
+        
+        .table-products
+          .table-products__container.lazy(data-bg="url(assets/img/slider-products/bg.jpg)")
+            .container-fluid
+              h4.head-title.table-products__title Таблица размеров
+              .table
+                .table__body
+                  .table__row
+                    .table__cell.table__cell_1.table__bold Международный
+                    .table__cell.table__cell_2.table__bold XS
+                    .table__cell.table__cell_3.table__bold S
+                    .table__cell.table__cell_4.table__bold M
+                    .table__cell.table__cell_5.table__bold L
+                    .table__cell.table__cell_6.table__bold XL
+                    .table__cell.table__cell_7.table__bold XXL
+                  .table__row
+                    .table__cell.table__cell_1.table__bold Росийский
+                    .table__cell.table__cell_2.table__bold 40
+                    .table__cell.table__cell_3.table__bold 42
+                    .table__cell.table__cell_4.table__bold 44/46
+                    .table__cell.table__cell_5.table__bold 48/50
+                    .table__cell.table__cell_6.table__bold 52/54
+                    .table__cell.table__cell_7.table__bold 56
+                  .table__row
+                    .table__cell.table__cell_1.table__bold Бедра (см)
+                    .table__cell.table__cell_2 84/92
+                    .table__cell.table__cell_3 92-95
+                    .table__cell.table__cell_4 96-101
+                    .table__cell.table__cell_5 102-108
+                    .table__cell.table__cell_6 109-116
+                    .table__cell.table__cell_7 117-121
+                  .table__row
+                    .table__cell.table__cell_1.table__bold Талия (см)
+                    .table__cell.table__cell_2 60-65
+                    .table__cell.table__cell_3 66-69
+                    .table__cell.table__cell_4 70-77
+                    .table__cell.table__cell_5 78-85
+                    .table__cell.table__cell_6 86-95
+                    .table__cell.table__cell_7 96-102
+                  .table__row
+                    .table__cell.table__cell_1.table__bold Грудь (см)
+                    .table__cell.table__cell_2 84/92
+                    .table__cell.table__cell_3 92-95
+                    .table__cell.table__cell_4 96-101
+                    .table__cell.table__cell_5 102-108
+                    .table__cell.table__cell_6 109-116
+                    .table__cell.table__cell_7 117-121
+
+        .catalog-products.layout__margin-top
+          .container-fluid
+            h4.head-title Каталог
+            .tab.catalog-products__tab
+              .catalog-products__list-tab.tab__list
+                a.catalog-products__link-tab.tab__link.tab__link_active(href="#" data-tab=".tab__content-item_1") повседневные портупеи
+                a.catalog-products__link-tab.tab__link(href="#" data-tab=".tab__content-item_2") эротичесские портупеи
+              .tab__content.catalog-products__tab-content
+                .tab__content-item.tab__content-item_1
+                  .list-catalog
+                    .list-catalog__row
+                      .list-catalog__col
+                        .list-catalog__item.animation-products
+                          .list-catalog__preview
+                            img.list-catalog__img.lazy(data-src="assets/img/catalog/1.jpg", alt="#")
+                            span.list-catalog__sale -70%
+                          .list-catalog__info
+                            h5.list-catalog__name Портупея “Пеппи”
+                            form(action="#")
+                              .list-size-product.list-catalog__list-size-product
+                                .list-size-product__field
+                                  input#size-product-1.list-size-product__input(type="radio" name="size-product" value="XS")
+                                  label.list-size-product__label(for="size-product-1") XS
+                                .list-size-product__field
+                                  input#size-product-2.list-size-product__input(type="radio" name="size-product" value="S")
+                                  label.list-size-product__label(for="size-product-2") S
+                                .list-size-product__field
+                                  input#size-product-3.list-size-product__input(type="radio" name="size-product" value="M" checked)
+                                  label.list-size-product__label(for="size-product-3") M
+                                .list-size-product__field
+                                  input#size-product-4.list-size-product__input(type="radio" name="size-product" value="L")
+                                  label.list-size-product__label(for="size-product-4") L
+                                .list-size-product__field
+                                  input#size-product-5.list-size-product__input(type="radio" name="size-product" value="XL")
+                                  label.list-size-product__label(for="size-product-5") XL
+                                .list-size-product__field
+                                  input#size-product-6.list-size-product__input(type="radio" name="size-product" value="XXL")
+                                  label.list-size-product__label.list-size-product__label_disabled(for="size-product-6") XXL
+                              .list-color-product.list-catalog__list-color-product
+                                .list-color-product__field
+                                  input#color-product-1.list-color-product__input(type="radio" name="color-product" value="black")
+                                  label.list-color-product__label.list-color-product__label_black(for="color-product-1")
+                                .list-color-product__field
+                                  input#color-product-2.list-color-product__input(type="radio" name="color-product" value="red")
+                                  label.list-color-product__label.list-color-product__label_red(for="color-product-2")
+                              .price-product.list-catalog__price-product
+                                span.price-product__old 4990 р.
+                                span.price-product__new 2990 р.
+                              a.list-catalog__btn-order(href="#") Заказать
+
+                      .list-catalog__col
+                        .list-catalog__item.animation-products
+                          .list-catalog__preview
+                            img.list-catalog__img.lazy(data-src="assets/img/catalog/2.jpg", alt="#")
+                            span.list-catalog__sale -50%
+                          .list-catalog__info
+                            h5.list-catalog__name Портупея “Пеппи”
+                            form(action="#")
+                              .list-size-product.list-catalog__list-size-product
+                                .list-size-product__field
+                                  input#size-product-6.list-size-product__input(type="radio" name="size-product" value="XS")
+                                  label.list-size-product__label(for="size-product-6") XS
+                                .list-size-product__field
+                                  input#size-product-7.list-size-product__input(type="radio" name="size-product" value="S")
+                                  label.list-size-product__label(for="size-product-7") S
+                                .list-size-product__field
+                                  input#size-product-8.list-size-product__input(type="radio" name="size-product" value="M" checked)
+                                  label.list-size-product__label(for="size-product-8") M
+                                .list-size-product__field
+                                  input#size-product-9.list-size-product__input(type="radio" name="size-product" value="L")
+                                  label.list-size-product__label(for="size-product-9") L
+                                .list-size-product__field
+                                  input#size-product-10.list-size-product__input(type="radio" name="size-product" value="XL")
+                                  label.list-size-product__label(for="size-product-10") XL
+                                .list-size-product__field
+                                  input#size-product-11.list-size-product__input(type="radio" name="size-product" value="XXL")
+                                  label.list-size-product__label.list-size-product__label_disabled(for="size-product-11") XXL
+                              .list-color-product.list-catalog__list-color-product
+                                .list-color-product__field
+                                  input#color-product-3.list-color-product__input(type="radio" name="color-product" value="black")
+                                  label.list-color-product__label.list-color-product__label_black(for="color-product-3")
+                                .list-color-product__field
+                                  input#color-product-4.list-color-product__input(type="radio" name="color-product" value="red")
+                                  label.list-color-product__label.list-color-product__label_red(for="color-product-4")
+                              .price-product.list-catalog__price-product
+                                span.price-product__old 4990 р.
+                                span.price-product__new 2990 р.
+                              a.list-catalog__btn-order(href="#") Заказать
+
+                      .list-catalog__col
+                        .list-catalog__item.animation-products
+                          .list-catalog__preview
+                            img.list-catalog__img.lazy(data-src="assets/img/catalog/1.jpg", alt="#")
+                            span.list-catalog__sale -50%
+                          .list-catalog__info
+                            h5.list-catalog__name Портупея “Пеппи”
+                            form(action="#")
+                              .list-size-product.list-catalog__list-size-product
+                                .list-size-product__field
+                                  input#size-product-12.list-size-product__input(type="radio" name="size-product" value="XS")
+                                  label.list-size-product__label(for="size-product-12") XS
+                                .list-size-product__field
+                                  input#size-product-13.list-size-product__input(type="radio" name="size-product" value="S")
+                                  label.list-size-product__label(for="size-product-13") S
+                                .list-size-product__field
+                                  input#size-product-14.list-size-product__input(type="radio" name="size-product" value="M" checked)
+                                  label.list-size-product__label(for="size-product-14") M
+                                .list-size-product__field
+                                  input#size-product-15.list-size-product__input(type="radio" name="size-product" value="L")
+                                  label.list-size-product__label(for="size-product-15") L
+                                .list-size-product__field
+                                  input#size-product-16.list-size-product__input(type="radio" name="size-product" value="XL")
+                                  label.list-size-product__label(for="size-product-16") XL
+                                .list-size-product__field
+                                  input#size-product-17.list-size-product__input(type="radio" name="size-product" value="XXL")
+                                  label.list-size-product__label.list-size-product__label_disabled(for="size-product-17") XXL
+                              .list-color-product.list-catalog__list-color-product
+                                .list-color-product__field
+                                  input#color-product-5.list-color-product__input(type="radio" name="color-product" value="black")
+                                  label.list-color-product__label.list-color-product__label_black(for="color-product-5")
+                                .list-color-product__field
+                                  input#color-product-6.list-color-product__input(type="radio" name="color-product" value="red")
+                                  label.list-color-product__label.list-color-product__label_red(for="color-product-6")
+                              .price-product.list-catalog__price-product
+                                span.price-product__old 4990 р.
+                                span.price-product__new 2990 р.
+                              a.list-catalog__btn-order(href="#") Заказать
+
+                      .list-catalog__col
+                        .list-catalog__item.animation-products
+                          .list-catalog__preview
+                            img.list-catalog__img.lazy(data-src="assets/img/catalog/2.jpg", alt="#")
+                            span.list-catalog__sale -20%
+                          .list-catalog__info
+                            h5.list-catalog__name Портупея “Пеппи”
+                            form(action="#")
+                              .list-size-product.list-catalog__list-size-product
+                                .list-size-product__field
+                                  input#size-product-18.list-size-product__input(type="radio" name="size-product" value="XS")
+                                  label.list-size-product__label(for="size-product-18") XS
+                                .list-size-product__field
+                                  input#size-product-19.list-size-product__input(type="radio" name="size-product" value="S")
+                                  label.list-size-product__label(for="size-product-19") S
+                                .list-size-product__field
+                                  input#size-product-20.list-size-product__input(type="radio" name="size-product" value="M" checked)
+                                  label.list-size-product__label(for="size-product-20") M
+                                .list-size-product__field
+                                  input#size-product-21.list-size-product__input(type="radio" name="size-product" value="L")
+                                  label.list-size-product__label(for="size-product-21") L
+                                .list-size-product__field
+                                  input#size-product-22.list-size-product__input(type="radio" name="size-product" value="XL")
+                                  label.list-size-product__label(for="size-product-22") XL
+                                .list-size-product__field
+                                  input#size-product-23.list-size-product__input(type="radio" name="size-product" value="XXL")
+                                  label.list-size-product__label.list-size-product__label_disabled(for="size-product-23") XXL
+                              .list-color-product.list-catalog__list-color-product
+                                .list-color-product__field
+                                  input#color-product-7.list-color-product__input(type="radio" name="color-product" value="black")
+                                  label.list-color-product__label.list-color-product__label_black(for="color-product-7")
+                                .list-color-product__field
+                                  input#color-product-8.list-color-product__input(type="radio" name="color-product" value="red")
+                                  label.list-color-product__label.list-color-product__label_red(for="color-product-8")
+                              .price-product.list-catalog__price-product
+                                span.price-product__old 4990 р.
+                                span.price-product__new 2990 р.
+                              a.list-catalog__btn-order(href="#") Заказать
+                      
+                      .list-catalog__col
+                        .list-catalog__item.animation-products
+                          .list-catalog__preview
+                            img.list-catalog__img.lazy(data-src="assets/img/catalog/1.jpg", alt="#")
+                            span.list-catalog__sale -50%
+                          .list-catalog__info
+                            h5.list-catalog__name Портупея “Пеппи”
+                            form(action="#")
+                              .list-size-product.list-catalog__list-size-product
+                                .list-size-product__field
+                                  input#size-product-24.list-size-product__input(type="radio" name="size-product" value="XS")
+                                  label.list-size-product__label(for="size-product-24") XS
+                                .list-size-product__field
+                                  input#size-product-25.list-size-product__input(type="radio" name="size-product" value="S")
+                                  label.list-size-product__label(for="size-product-25") S
+                                .list-size-product__field
+                                  input#size-product-26.list-size-product__input(type="radio" name="size-product" value="M" checked)
+                                  label.list-size-product__label(for="size-product-26") M
+                                .list-size-product__field
+                                  input#size-product-27.list-size-product__input(type="radio" name="size-product" value="L")
+                                  label.list-size-product__label(for="size-product-27") L
+                                .list-size-product__field
+                                  input#size-product-28.list-size-product__input(type="radio" name="size-product" value="XL")
+                                  label.list-size-product__label(for="size-product-28") XL
+                                .list-size-product__field
+                                  input#size-product-29.list-size-product__input(type="radio" name="size-product" value="XXL")
+                                  label.list-size-product__label.list-size-product__label_disabled(for="size-product-29") XXL
+                              .list-color-product.list-catalog__list-color-product
+                                .list-color-product__field
+                                  input#color-product-9.list-color-product__input(type="radio" name="color-product" value="black")
+                                  label.list-color-product__label.list-color-product__label_black(for="color-product-9")
+                                .list-color-product__field
+                                  input#color-product-10.list-color-product__input(type="radio" name="color-product" value="red")
+                                  label.list-color-product__label.list-color-product__label_red(for="color-product-10")
+                              .price-product.list-catalog__price-product
+                                span.price-product__old 4990 р.
+                                span.price-product__new 2990 р.
+                              a.list-catalog__btn-order(href="#") Заказать
+                      
+                      .list-catalog__col
+                        .list-catalog__item.animation-products
+                          .list-catalog__preview
+                            img.list-catalog__img.lazy(data-src="assets/img/catalog/2.jpg", alt="#")
+                            span.list-catalog__sale -50%
+                          .list-catalog__info
+                            h5.list-catalog__name Портупея “Пеппи”
+                            form(action="#")
+                              .list-size-product.list-catalog__list-size-product
+                                .list-size-product__field
+                                  input#size-product-30.list-size-product__input(type="radio" name="size-product" value="XS")
+                                  label.list-size-product__label(for="size-product-30") XS
+                                .list-size-product__field
+                                  input#size-product-31.list-size-product__input(type="radio" name="size-product" value="S")
+                                  label.list-size-product__label(for="size-product-31") S
+                                .list-size-product__field
+                                  input#size-product-32.list-size-product__input(type="radio" name="size-product" value="M" checked)
+                                  label.list-size-product__label(for="size-product-32") M
+                                .list-size-product__field
+                                  input#size-product-33.list-size-product__input(type="radio" name="size-product" value="L")
+                                  label.list-size-product__label(for="size-product-33") L
+                                .list-size-product__field
+                                  input#size-product-34.list-size-product__input(type="radio" name="size-product" value="XL")
+                                  label.list-size-product__label(for="size-product-34") XL
+                                .list-size-product__field
+                                  input#size-product-35.list-size-product__input(type="radio" name="size-product" value="XXL")
+                                  label.list-size-product__label.list-size-product__label_disabled(for="size-product-35") XXL
+                              .list-color-product.list-catalog__list-color-product
+                                .list-color-product__field
+                                  input#color-product-11.list-color-product__input(type="radio" name="color-product" value="black")
+                                  label.list-color-product__label.list-color-product__label_black(for="color-product-11")
+                                .list-color-product__field
+                                  input#color-product-12.list-color-product__input(type="radio" name="color-product" value="red")
+                                  label.list-color-product__label.list-color-product__label_red(for="color-product-12")
+                              .price-product.list-catalog__price-product
+                                span.price-product__old 4990 р.
+                                span.price-product__new 2990 р.
+                              a.list-catalog__btn-order(href="#") Заказать
+
+                .tab__content-item.tab__content-item_2
+                  .list-catalog
+                    .list-catalog__row
+                      .list-catalog__col
+                        .list-catalog__item.animation-products
+                          .list-catalog__preview
+                            img.list-catalog__img.lazy(data-src="assets/img/catalog/2.jpg", alt="#")
+                            span.list-catalog__sale -50%
+                          .list-catalog__info
+                            h5.list-catalog__name Портупея “Пеппи”
+                            form(action="#")
+                              .list-size-product.list-catalog__list-size-product
+                                .list-size-product__field
+                                  input#size-product-1.list-size-product__input(type="radio" name="size-product" value="XS")
+                                  label.list-size-product__label(for="size-product-1") XS
+                                .list-size-product__field
+                                  input#size-product-2.list-size-product__input(type="radio" name="size-product" value="S")
+                                  label.list-size-product__label(for="size-product-2") S
+                                .list-size-product__field
+                                  input#size-product-3.list-size-product__input(type="radio" name="size-product" value="M" checked)
+                                  label.list-size-product__label(for="size-product-3") M
+                                .list-size-product__field
+                                  input#size-product-4.list-size-product__input(type="radio" name="size-product" value="L")
+                                  label.list-size-product__label(for="size-product-4") L
+                                .list-size-product__field
+                                  input#size-product-5.list-size-product__input(type="radio" name="size-product" value="XL")
+                                  label.list-size-product__label(for="size-product-5") XL
+                                .list-size-product__field
+                                  input#size-product-6.list-size-product__input(type="radio" name="size-product" value="XXL")
+                                  label.list-size-product__label.list-size-product__label_disabled(for="size-product-6") XXL
+                              .list-color-product.list-catalog__list-color-product
+                                .list-color-product__field
+                                  input#color-product-1.list-color-product__input(type="radio" name="color-product" value="black")
+                                  label.list-color-product__label.list-color-product__label_black(for="color-product-1")
+                                .list-color-product__field
+                                  input#color-product-2.list-color-product__input(type="radio" name="color-product" value="red")
+                                  label.list-color-product__label.list-color-product__label_red(for="color-product-2")
+                              .price-product.list-catalog__price-product
+                                span.price-product__old 4990 р.
+                                span.price-product__new 2990 р.
+                              a.list-catalog__btn-order(href="#") Заказать
+
+                      .list-catalog__col
+                        .list-catalog__item.animation-products
+                          .list-catalog__preview
+                            img.list-catalog__img.lazy(data-src="assets/img/catalog/1.jpg", alt="#")
+                            span.list-catalog__sale -50%
+                          .list-catalog__info
+                            h5.list-catalog__name Портупея “Пеппи”
+                            form(action="#")
+                              .list-size-product.list-catalog__list-size-product
+                                .list-size-product__field
+                                  input#size-product-6.list-size-product__input(type="radio" name="size-product" value="XS")
+                                  label.list-size-product__label(for="size-product-6") XS
+                                .list-size-product__field
+                                  input#size-product-7.list-size-product__input(type="radio" name="size-product" value="S")
+                                  label.list-size-product__label(for="size-product-7") S
+                                .list-size-product__field
+                                  input#size-product-8.list-size-product__input(type="radio" name="size-product" value="M" checked)
+                                  label.list-size-product__label(for="size-product-8") M
+                                .list-size-product__field
+                                  input#size-product-9.list-size-product__input(type="radio" name="size-product" value="L")
+                                  label.list-size-product__label(for="size-product-9") L
+                                .list-size-product__field
+                                  input#size-product-10.list-size-product__input(type="radio" name="size-product" value="XL")
+                                  label.list-size-product__label(for="size-product-10") XL
+                                .list-size-product__field
+                                  input#size-product-11.list-size-product__input(type="radio" name="size-product" value="XXL")
+                                  label.list-size-product__label.list-size-product__label_disabled(for="size-product-11") XXL
+                              .list-color-product.list-catalog__list-color-product
+                                .list-color-product__field
+                                  input#color-product-12.list-color-product__input(type="radio" name="color-product" value="black")
+                                  label.list-color-product__label.list-color-product__label_black(for="color-product-3")
+                                .list-color-product__field
+                                  input#color-product-13.list-color-product__input(type="radio" name="color-product" value="red")
+                                  label.list-color-product__label.list-color-product__label_red(for="color-product-4")
+                              .price-product.list-catalog__price-product
+                                span.price-product__old 4990 р.
+                                span.price-product__new 2990 р.
+                              a.list-catalog__btn-order(href="#") Заказать
+
+                      .list-catalog__col
+                        .list-catalog__item.animation-products
+                          .list-catalog__preview
+                            img.list-catalog__img.lazy(data-src="assets/img/catalog/2.jpg", alt="#")
+                            span.list-catalog__sale -35%
+                          .list-catalog__info
+                            h5.list-catalog__name Портупея “Пеппи”
+                            form(action="#")
+                              .list-size-product.list-catalog__list-size-product
+                                .list-size-product__field
+                                  input#size-product-12.list-size-product__input(type="radio" name="size-product" value="XS")
+                                  label.list-size-product__label(for="size-product-12") XS
+                                .list-size-product__field
+                                  input#size-product-13.list-size-product__input(type="radio" name="size-product" value="S")
+                                  label.list-size-product__label(for="size-product-13") S
+                                .list-size-product__field
+                                  input#size-product-14.list-size-product__input(type="radio" name="size-product" value="M" checked)
+                                  label.list-size-product__label(for="size-product-14") M
+                                .list-size-product__field
+                                  input#size-product-15.list-size-product__input(type="radio" name="size-product" value="L")
+                                  label.list-size-product__label(for="size-product-15") L
+                                .list-size-product__field
+                                  input#size-product-16.list-size-product__input(type="radio" name="size-product" value="XL")
+                                  label.list-size-product__label(for="size-product-16") XL
+                                .list-size-product__field
+                                  input#size-product-17.list-size-product__input(type="radio" name="size-product" value="XXL")
+                                  label.list-size-product__label.list-size-product__label_disabled(for="size-product-17") XXL
+                              .list-color-product.list-catalog__list-color-product
+                                .list-color-product__field
+                                  input#color-product-5.list-color-product__input(type="radio" name="color-product" value="black")
+                                  label.list-color-product__label.list-color-product__label_black(for="color-product-5")
+                                .list-color-product__field
+                                  input#color-product-6.list-color-product__input(type="radio" name="color-product" value="red")
+                                  label.list-color-product__label.list-color-product__label_red(for="color-product-6")
+                              .price-product.list-catalog__price-product
+                                span.price-product__old 4990 р.
+                                span.price-product__new 2990 р.
+                              a.list-catalog__btn-order(href="#") Заказать
+
+                      .list-catalog__col
+                        .list-catalog__item.animation-products
+                          .list-catalog__preview
+                            img.list-catalog__img.lazy(data-src="assets/img/catalog/2.jpg", alt="#")
+                            span.list-catalog__sale -50%
+                          .list-catalog__info
+                            h5.list-catalog__name Портупея “Пеппи”
+                            form(action="#")
+                              .list-size-product.list-catalog__list-size-product
+                                .list-size-product__field
+                                  input#size-product-18.list-size-product__input(type="radio" name="size-product" value="XS")
+                                  label.list-size-product__label(for="size-product-18") XS
+                                .list-size-product__field
+                                  input#size-product-19.list-size-product__input(type="radio" name="size-product" value="S")
+                                  label.list-size-product__label(for="size-product-19") S
+                                .list-size-product__field
+                                  input#size-product-20.list-size-product__input(type="radio" name="size-product" value="M" checked)
+                                  label.list-size-product__label(for="size-product-20") M
+                                .list-size-product__field
+                                  input#size-product-21.list-size-product__input(type="radio" name="size-product" value="L")
+                                  label.list-size-product__label(for="size-product-21") L
+                                .list-size-product__field
+                                  input#size-product-22.list-size-product__input(type="radio" name="size-product" value="XL")
+                                  label.list-size-product__label(for="size-product-22") XL
+                                .list-size-product__field
+                                  input#size-product-23.list-size-product__input(type="radio" name="size-product" value="XXL")
+                                  label.list-size-product__label.list-size-product__label_disabled(for="size-product-23") XXL
+                              .list-color-product.list-catalog__list-color-product
+                                .list-color-product__field
+                                  input#color-product-7.list-color-product__input(type="radio" name="color-product" value="black")
+                                  label.list-color-product__label.list-color-product__label_black(for="color-product-7")
+                                .list-color-product__field
+                                  input#color-product-8.list-color-product__input(type="radio" name="color-product" value="red")
+                                  label.list-color-product__label.list-color-product__label_red(for="color-product-8")
+                              .price-product.list-catalog__price-product
+                                span.price-product__old 4990 р.
+                                span.price-product__new 2990 р.
+                              a.list-catalog__btn-order(href="#") Заказать
+                      
+                      .list-catalog__col
+                        .list-catalog__item.animation-products
+                          .list-catalog__preview
+                            img.list-catalog__img.lazy(data-src="assets/img/catalog/1.jpg", alt="#")
+                            span.list-catalog__sale -50%
+                          .list-catalog__info
+                            h5.list-catalog__name Портупея “Пеппи”
+                            form(action="#")
+                              .list-size-product.list-catalog__list-size-product
+                                .list-size-product__field
+                                  input#size-product-24.list-size-product__input(type="radio" name="size-product" value="XS")
+                                  label.list-size-product__label(for="size-product-24") XS
+                                .list-size-product__field
+                                  input#size-product-25.list-size-product__input(type="radio" name="size-product" value="S")
+                                  label.list-size-product__label(for="size-product-25") S
+                                .list-size-product__field
+                                  input#size-product-26.list-size-product__input(type="radio" name="size-product" value="M" checked)
+                                  label.list-size-product__label(for="size-product-26") M
+                                .list-size-product__field
+                                  input#size-product-27.list-size-product__input(type="radio" name="size-product" value="L")
+                                  label.list-size-product__label(for="size-product-27") L
+                                .list-size-product__field
+                                  input#size-product-28.list-size-product__input(type="radio" name="size-product" value="XL")
+                                  label.list-size-product__label(for="size-product-28") XL
+                                .list-size-product__field
+                                  input#size-product-29.list-size-product__input(type="radio" name="size-product" value="XXL")
+                                  label.list-size-product__label.list-size-product__label_disabled(for="size-product-29") XXL
+                              .list-color-product.list-catalog__list-color-product
+                                .list-color-product__field
+                                  input#color-product-9.list-color-product__input(type="radio" name="color-product" value="black")
+                                  label.list-color-product__label.list-color-product__label_black(for="color-product-9")
+                                .list-color-product__field
+                                  input#color-product-10.list-color-product__input(type="radio" name="color-product" value="red")
+                                  label.list-color-product__label.list-color-product__label_red(for="color-product-10")
+                              .price-product.list-catalog__price-product
+                                span.price-product__old 4990 р.
+                                span.price-product__new 2990 р.
+                              a.list-catalog__btn-order(href="#") Заказать
+                      
+                      .list-catalog__col
+                        .list-catalog__item.animation-products
+                          .list-catalog__preview
+                            img.list-catalog__img.lazy(data-src="assets/img/catalog/2.jpg", alt="#")
+                            span.list-catalog__sale -50%
+                          .list-catalog__info
+                            h5.list-catalog__name Портупея “Пеппи”
+                            form(action="#")
+                              .list-size-product.list-catalog__list-size-product
+                                .list-size-product__field
+                                  input#size-product-30.list-size-product__input(type="radio" name="size-product" value="XS")
+                                  label.list-size-product__label(for="size-product-30") XS
+                                .list-size-product__field
+                                  input#size-product-31.list-size-product__input(type="radio" name="size-product" value="S")
+                                  label.list-size-product__label(for="size-product-31") S
+                                .list-size-product__field
+                                  input#size-product-32.list-size-product__input(type="radio" name="size-product" value="M" checked)
+                                  label.list-size-product__label(for="size-product-32") M
+                                .list-size-product__field
+                                  input#size-product-33.list-size-product__input(type="radio" name="size-product" value="L")
+                                  label.list-size-product__label(for="size-product-33") L
+                                .list-size-product__field
+                                  input#size-product-34.list-size-product__input(type="radio" name="size-product" value="XL")
+                                  label.list-size-product__label(for="size-product-34") XL
+                                .list-size-product__field
+                                  input#size-product-35.list-size-product__input(type="radio" name="size-product" value="XXL")
+                                  label.list-size-product__label.list-size-product__label_disabled(for="size-product-35") XXL
+                              .list-color-product.list-catalog__list-color-product
+                                .list-color-product__field
+                                  input#color-product-11.list-color-product__input(type="radio" name="color-product" value="black")
+                                  label.list-color-product__label.list-color-product__label_black(for="color-product-11")
+                                .list-color-product__field
+                                  input#color-product-12.list-color-product__input(type="radio" name="color-product" value="red")
+                                  label.list-color-product__label.list-color-product__label_red(for="color-product-12")
+                              .price-product.list-catalog__price-product
+                                span.price-product__old 4990 р.
+                                span.price-product__new 2990 р.
+                              a.list-catalog__btn-order(href="#") Заказать
+
+        .how-order
+          .how-order__container
+            .container-fluid
+              h4.head-title.how-order__title КАК заказать?
+              .list-how-order
+                .list-how-order__row
+                  .list-how-order__line
+                  .list-how-order__col
+                    .list-how-order__item.animation-features
+                      .list-how-order__circle
+                        +svg('newspaper', 'list-how-order__icon')
+                      p.list-how-order__descr Вы оформляете заказ на нашем сайте
+                  .list-how-order__col
+                    .list-how-order__item.animation-features
+                      .list-how-order__circle
+                        +svg('support', 'list-how-order__icon')
+                      p.list-how-order__descr Менеджер перезвонит для уточнения деталей заказа
+                  .list-how-order__col
+                    .list-how-order__item.animation-features
+                      .list-how-order__circle
+                        +svg('box', 'list-how-order__icon')
+                      p.list-how-order__descr В блежайшее время отправляем ваш заказ
+                  .list-how-order__col
+                    .list-how-order__item.animation-features
+                      .list-how-order__circle
+                        +svg('credit-card', 'list-how-order__icon')
+                      p.list-how-order__descr Вы оплачиваете заказ при получении

@@ -1,0 +1,9 @@
+mixin svg(nameIcon, className)
+  - var svgName = "svg-icon-" + nameIcon
+  if typeof(className) != 'undefined'
+    - var svgClass = className
+    svg(class=`${svgClass}`)
+      use(xlink:href=`${baseDir}assets/img/sprites/sprite.svg#${svgName}`)
+  else
+    svg
+      use(xlink:href=`${baseDir}assets/img/sprites/sprite.svg#${svgName}`)

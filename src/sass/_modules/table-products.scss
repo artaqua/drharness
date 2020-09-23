@@ -1,0 +1,94 @@
+@import '_components/variables';
+@import '_components/mixins';
+
+.table-products {
+  &__container {
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    padding: 40px 0;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+}
+.table {
+  position: relative;
+  width: 100%;
+  overflow-y: auto;
+  -ms-overflow-style: scrollbar;
+  background-color: #fff;
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,.2);
+  &__body {
+    width: 100%;
+    display: table;
+    padding: 30px;
+    @include sm {
+      padding: 10px;
+    }
+    @include below(600px) {
+      width: 600px;
+    }
+  }
+  &__row {
+    width: 100%;
+    display: table-row;
+    &:nth-child(odd) {
+      background-color: #F3F3F3;
+    }
+  }
+  &__bold {
+    font-weight: 700;
+  }
+  &__cell {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    color: $black;
+    padding: 12px 30px;
+    transition: all 350ms ease;
+    @include sm {
+      font-size: 12px;
+      padding: 15px 10px;
+    }
+    &_1 {
+      width: 20%;
+      text-align: left;
+    }
+    // &_2 {
+    //   width: 20%;
+    //   @include below(800px) {
+    //     width: 20%;
+    //   }
+    //   @include below(600px) {
+    //     width: 20%;
+    //   }
+    // }
+    // &_3 {
+    //   width: 20%;
+    //   @include below(800px) {
+    //     width: 15%;
+    //   }
+    //   @include below(600px) {
+    //     width: 15%;
+    //   }
+    // }
+    // &_4 {
+    //   width: 20%;
+    //   @include below(800px) {
+    //     width: 15%;
+    //   }
+    //   @include below(600px) {
+    //     width: 15%;
+    //   }
+    // }
+    // &_5 {
+    //   width: 20%;
+    //   @include below(800px) {
+    //     width: 30%;
+    //   }
+    // }
+  }
+}

@@ -1,0 +1,42 @@
+/////////////////////////////// MIXINS
+@mixin hr($value,$color) {
+  border-style: none;
+  border-bottom: $value solid $color;
+}
+   
+/////////////////////////////// BREAKPOINTS
+@mixin md {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin below($width:500px) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin below-h($height:500px) {
+  @media only screen and (max-height: $height) {
+    @content;
+  }
+}
+
+@mixin below-h-w($height:500px,$width:500px) {
+  @media only screen and (max-height: $height) and (max-width: $width) {
+    @content;
+  }
+}

@@ -1,0 +1,90 @@
+.header-page {
+  width: 100%;
+  width: 100vw;
+  background: $white;
+  box-shadow: 0 4px 20px 0 rgba(207,218,229,.6);
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+  }
+  &__btn-menu {
+    display: none;
+    padding: 0;
+    @include below(650px) {
+      display: block;
+    }
+  }
+  &__nav-page {
+    @include below(650px) {
+      display: none !important;
+    }
+  }
+}
+.logo {
+  @include below(1100px) {
+    width: 100px;
+    margin-right: 20px;
+  }
+}
+.btn-menu {
+  background: none;
+  border: none;
+  transition: all 300ms ease;
+  &_active {
+    transform: rotate(180deg);
+  }
+  &__lines {
+    display: block;
+    margin: 0 auto;
+    width: 21px;
+  }
+  &__line {
+    float: left;
+    clear: both;
+    width: 100%;
+    height: 2px;
+    background: $black;
+    margin: 1.5px 0;
+    transition: all 300ms ease-in-out;
+  }
+}
+.nav-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.list-nav-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &__item {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 16px;
+    user-select: none;
+    @include below(1150px) {
+      margin: 0 10px;
+    }
+    @include below(900px) {
+      margin: 0 8px;
+    }
+  }
+  &__link {
+    font-family: $font-1;
+    font-size: 16px;
+    color: $black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    @include below(1100px) {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+/* Components */
+// @import '_components/fonts';
+@import '_components/variables';
+@import '_components/mixins';
+@import '_components/settings';
+@import '_components/png-sprite';
+@import '_components/animation';
+
+/* Layout */
+@import '_layout/loader';
+@import '_layout/common';
+@import '_layout/header';
+@import '_layout/sidebar-menu';
+
+/* Modules */
+@import '_modules/preview-product';
+@import '_modules/descr-product';
+@import '_modules/table-products';
+@import '_modules/catalog-products';
+@import '_modules/how-order';
+
+/* Plagins */
+/* Imports from node_modules */
+@import 'swiper/dist/css/swiper.css';
+@import 'lightgallery.js/dist/css/lightgallery.css';
+/* Change plagins */
+@import '_plagins/change-plagins';
+
+
+
+
